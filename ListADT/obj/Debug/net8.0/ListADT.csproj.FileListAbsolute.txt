@@ -1,0 +1,11 @@
+/home/lab/Documents/C#DataStructures/ListADT/bin/Debug/net8.0/ListADT.deps.json
+/home/lab/Documents/C#DataStructures/ListADT/bin/Debug/net8.0/ListADT.dll
+/home/lab/Documents/C#DataStructures/ListADT/bin/Debug/net8.0/ListADT.pdb
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.GeneratedMSBuildEditorConfig.editorconfig
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.AssemblyInfoInputs.cache
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.AssemblyInfo.cs
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.csproj.CoreCompileInputs.cache
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.dll
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/refint/ListADT.dll
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.pdb
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ref/ListADT.dll
