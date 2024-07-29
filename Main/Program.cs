@@ -42,4 +42,16 @@ test.Print();
 Console.WriteLine("Length is " + test.Length);
 Console.WriteLine("Size is " + test.Size);
 Console.WriteLine("-----------------");
-Console.WriteLine(test[5]);
+test.Append(3000);
+test.Append(4000);
+test.Print();
+Console.WriteLine("Length is " + test.Length);
+Console.WriteLine("Size is " + test.Size);
+Console.WriteLine("-----------------");
+int n = test.Length;
+for (int i = 0; i < n; i++)
+{
+    test.Pop();
+}
+Console.WriteLine("Length is " + test.Length);
+Console.WriteLine("Size is " + test.Size);

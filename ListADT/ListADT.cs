@@ -25,10 +25,14 @@ public class ListADT<T>
             }
             else
             {
+                if (_length == _size)
+                {
+                    Expand();
+                }
                 _arr[index] = value;
+                _length++;
             }
         }
-
     }
     public int Size
     {
@@ -65,15 +69,10 @@ public class ListADT<T>
     }
     public void Append(T val)
     {
-        if (_length == _size)
-        {
-            Expand();
-        }
-        this[_length++] = val;
+        this[_length] = val;
     }
     public T Pop()
     {
-
         if (_length == (int)(_size * 0.5))
         {
             Shrink();
@@ -88,7 +87,7 @@ public class ListADT<T>
         Array.Copy(_arr, newArray, _arr.Length);
         _arr = newArray;
         _size *= 2;
-        
+
     }
     private void Shrink()
     {
@@ -96,6 +95,5 @@ public class ListADT<T>
         Array.Copy(_arr, newArray, _length);
         _arr = newArray;
         _size = _size * 1 / 2;
-        
     }
 }

@@ -16,3 +16,4 @@
 /home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/Main.pdb
 /home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/Main.genruntimeconfig.cache
 /home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/ref/Main.dll
+/home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/Main.sourcelink.json

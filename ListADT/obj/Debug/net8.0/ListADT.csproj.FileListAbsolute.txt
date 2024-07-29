@@ -9,3 +9,4 @@
 /home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/refint/ListADT.dll
 /home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.pdb
 /home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ref/ListADT.dll
+/home/lab/Documents/C#DataStructures/ListADT/obj/Debug/net8.0/ListADT.sourcelink.json
