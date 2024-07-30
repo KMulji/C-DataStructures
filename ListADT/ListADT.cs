@@ -81,6 +81,31 @@ public class ListADT<T>
         _length--;
         return ans;
     }
+   
+    // public int BinSearch(T key)
+    // {
+    //     int mid = 1;
+    //     int lo = 0;
+    //     int hi = _length - 1;
+
+    //     while (lo < hi)
+    //     {
+    //         mid = (lo + (hi - lo)) / 2;
+    //         if (this[mid] ==key)
+    //         {
+    //             return mid;
+    //         }
+    //         else if (this[mid] < key)
+    //         {
+    //             hi = mid - 1;
+    //         }
+    //         else if (this[mid] > key)
+    //         {
+    //             lo = mid + 1;
+    //         }
+    //     }
+    //     return -1;
+    // }
     private void Expand()
     {
         T[] newArray = new T[_size * 2];
