@@ -81,31 +81,46 @@ public class ListADT<T>
         _length--;
         return ans;
     }
-   
-    // public int BinSearch(T key)
-    // {
-    //     int mid = 1;
-    //     int lo = 0;
-    //     int hi = _length - 1;
+    private static bool Compare(T a, T b, int res)
+    {
+        Comparer<T> comparer = Comparer<T>.Default;
+        return comparer.Compare(a, b) == res ? true : false;
+    }
+    private static bool IsBiggerThan(T a, T b)
+    {
+        return Compare(a, b, 1);
+    }
+    private static bool IsEqualTo(T a, T b)
+    {
+        return Compare(a, b, 0);
+    }
+    private static bool IsLessThan(T a, T b)
+    {
+        return Compare(a, b, -1);
+    }
+    public int BinSearch(T key)
+    {
+        int lo = 0;
+        int hi = _length - 1;
 
-    //     while (lo < hi)
-    //     {
-    //         mid = (lo + (hi - lo)) / 2;
-    //         if (this[mid] ==key)
-    //         {
-    //             return mid;
-    //         }
-    //         else if (this[mid] < key)
-    //         {
-    //             hi = mid - 1;
-    //         }
-    //         else if (this[mid] > key)
-    //         {
-    //             lo = mid + 1;
-    //         }
-    //     }
-    //     return -1;
-    // }
+        while (lo <= hi)
+        {
+            int mid = lo + (hi - lo) / 2;
+            if (IsEqualTo(_arr[mid], key))
+            {
+                return mid;
+            }
+            else if (IsBiggerThan(_arr[mid], key))
+            {
+                hi = mid - 1;
+            }
+            else if (IsLessThan(_arr[mid], key))
+            {
+                lo = mid + 1;
+            }
+        }
+        return -1;
+    }
     private void Expand()
     {
         T[] newArray = new T[_size * 2];
