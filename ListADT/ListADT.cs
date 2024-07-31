@@ -30,7 +30,7 @@ public class ListADT<T>
                     Expand();
                 }
                 _arr[index] = value;
-                _length++;
+
             }
         }
     }
@@ -44,9 +44,9 @@ public class ListADT<T>
     }
     public ListADT()
     {
-        _arr = new T[10];
-        _size = 10;
-        _length = 10;
+        _arr = new T[1];
+        _size = 1;
+        _length = 0;
     }
     public ListADT(ref T[] arr)
     {
@@ -69,7 +69,7 @@ public class ListADT<T>
     }
     public void Append(T val)
     {
-        this[_length] = val;
+        this[_length++] = val;
     }
     public T Pop()
     {
@@ -81,22 +81,53 @@ public class ListADT<T>
         _length--;
         return ans;
     }
-    private static bool Compare(T a, T b, int res)
+    public void Insert(T val, int index)
     {
-        Comparer<T> comparer = Comparer<T>.Default;
-        return comparer.Compare(a, b) == res ? true : false;
+
+        if (_length == _size)
+        {
+            Expand();
+        }
+        if (_length == 0 && _size > 0)
+        {
+            _arr[0] = val;
+            _length++;
+            return;
+        }
+        int end = _length;
+        while (end != index)
+        {
+            _arr[end] = _arr[end - 1];
+            end--;
+        }
+        _length++;
+        _arr[end] = val;
+
     }
-    private static bool IsBiggerThan(T a, T b)
+    public T Delete(int index)
     {
-        return Compare(a, b, 1);
-    }
-    private static bool IsEqualTo(T a, T b)
-    {
-        return Compare(a, b, 0);
-    }
-    private static bool IsLessThan(T a, T b)
-    {
-        return Compare(a, b, -1);
+        if (_length == 0)
+        {
+            Console.WriteLine("Cannot delete from empty list");
+            return (T)(object)-1;
+        }
+
+        if (_length == (int)(_size * 0.5))
+        {
+            Shrink();
+        }
+        if (_length == 1)
+        {
+            _length--;
+            return _arr[0];
+        }
+        T ans = _arr[index];
+        for (int i = index; i < _length; i++)
+        {
+            _arr[i] = _arr[i + 1];
+        }
+        _length--;
+        return ans;
     }
     public int BinSearch(T key)
     {
@@ -120,6 +151,23 @@ public class ListADT<T>
             }
         }
         return -1;
+    }
+    private static bool Compare(T a, T b, int res)
+    {
+        Comparer<T> comparer = Comparer<T>.Default;
+        return comparer.Compare(a, b) == res ? true : false;
+    }
+    private static bool IsBiggerThan(T a, T b)
+    {
+        return Compare(a, b, 1);
+    }
+    private static bool IsEqualTo(T a, T b)
+    {
+        return Compare(a, b, 0);
+    }
+    private static bool IsLessThan(T a, T b)
+    {
+        return Compare(a, b, -1);
     }
     private void Expand()
     {
