@@ -19,18 +19,13 @@ public class ListADT<T>
         }
         set
         {
-            if (index < 0 || index > _length)
+            if (index < 0 || index >= _length)
             {
                 throw new IndexOutOfRangeException();
             }
             else
             {
-                if (_length == _size)
-                {
-                    Expand();
-                }
                 _arr[index] = value;
-
             }
         }
     }
@@ -69,7 +64,11 @@ public class ListADT<T>
     }
     public void Append(T val)
     {
-        this[_length++] = val;
+        if (_length == _size)
+        {
+            Expand();
+        }
+        _arr[_length++] = val;
     }
     public T Pop()
     {
@@ -77,13 +76,16 @@ public class ListADT<T>
         {
             Shrink();
         }
-        T ans = this[_length - 1];
+        T ans = _arr[_length - 1];
         _length--;
         return ans;
     }
     public void Insert(T val, int index)
     {
-
+        if (Bounds(index))
+        {
+            throw new IndexOutOfRangeException();
+        }
         if (_length == _size)
         {
             Expand();
@@ -102,7 +104,6 @@ public class ListADT<T>
         }
         _length++;
         _arr[end] = val;
-
     }
     public T Delete(int index)
     {
@@ -151,6 +152,46 @@ public class ListADT<T>
             }
         }
         return -1;
+    }
+    public void SelectionSort()
+    {
+        int minIndex = 0;
+        T minVal;
+        for (int i = 0; i < _length - 1; i++)
+        {
+            minIndex = i;
+            minVal = _arr[i];
+            for (int j = i + 1; j < _length; j++)
+            {
+                if (IsLessThan(_arr[j], minVal))
+                {
+                    minIndex = j;
+                    minVal = _arr[j];
+                }
+            }
+            T temp = _arr[i];
+            _arr[i] = _arr[minIndex];
+            _arr[minIndex] = temp;
+        }
+    }
+    public void InsertionSort()
+    {
+        int j = 0;
+        for (int i = 0; i < _length; i++)
+        {
+            j = i;
+            while (j > 0 && IsLessThan(_arr[j], _arr[j - 1]))
+            {
+                T temp = _arr[j];
+                _arr[j] = _arr[j - 1];
+                _arr[j - 1] = temp;
+                j--;
+            }
+        }
+    }
+    private bool Bounds(int index)
+    {
+        return index < 0 || index >= _length;
     }
     private static bool Compare(T a, T b, int res)
     {
