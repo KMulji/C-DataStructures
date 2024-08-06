@@ -1,7 +1,7 @@
 ﻿using ListADT;
 
-int[] arr = [-11, 12,-42, 0, 1, 90, 68, 6,-9];
+int[] arr = [-11, 12, -42, 0, 90, -9,80];
 ListADT<int> test = new ListADT<int>(ref arr);
-test.InsertionSort();
+test.BubbleSort();
 test.Print();
 

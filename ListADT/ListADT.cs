@@ -189,6 +189,76 @@ public class ListADT<T>
             }
         }
     }
+    public void BubbleSort()
+    {
+        for (int i = 0; i < _length; i++)
+        {
+            for (int j = 0; j < _length - 1; j++)
+            {
+                if (IsBiggerThan(_arr[j], _arr[j + 1]))
+                {
+                    T temp = _arr[j];
+                    _arr[j] = _arr[j + 1];
+                    _arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+    public void MergeSort()
+    {
+        T[] a = new T[_length];
+        Array.Copy(_arr, a, _length);
+        MergeSortS(a);
+        _arr = a;
+
+    }
+    private void MergeSortS(T[] a)
+    {
+        // split step
+        if (a.Length <= 1)
+        {
+            return;
+        }
+
+        int m = a.Length / 2;
+        T[] left = SubArray(a, 0, m - 1);
+        T[] right = SubArray(a, m, a.Length - 1);
+        MergeSortS(left);
+        MergeSortS(right);
+
+        //merge step
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+        while (i < left.Length && j < right.Length)
+        {
+            if (IsLessThan(left[i], right[j]) || IsEqualTo(left[i], right[j]))
+            {
+                a[k] = left[i++];
+            }
+            else
+            {
+                a[k] = right[j++];
+            }
+            k++;
+        }
+        // deal with left overs
+        while (i < left.Length)
+        {
+            a[k++] = left[i++];
+        }
+        while (j < right.Length)
+        {
+            a[k++] = right[j++];
+        }
+    }
+    private T[] SubArray(T[] a, int si, int ei)
+    {
+        T[] res = new T[ei - si + 1];
+        Array.Copy(a, si, res, 0, ei - si + 1);
+        return res;
+    }
     private bool Bounds(int index)
     {
         return index < 0 || index >= _length;
