@@ -253,6 +253,44 @@ public class ListADT<T>
             a[k++] = right[j++];
         }
     }
+    public void QuickSort()
+    {
+        T[] a = new T[_length];
+        Array.Copy(_arr, a, _length);
+        QuickSortS(a, 0, a.Length - 1);
+        _arr = a;
+    }
+    private void QuickSortS(T[] a, int l, int u)
+    {
+        if (l >= u) { return; }
+        T pivot = a[u];
+        int pIndex = u;
+        u--;
+        T temp;
+        while (l < u)
+        {
+            if (!IsBiggerThan(a[u], pivot) && !IsLessThan(a[l], pivot))
+            {
+                temp = a[u];
+                a[u] = a[l];
+                a[l] = temp;
+            }
+            while (IsLessThan(a[l], pivot) && l != u) { l++; }
+            while (IsBiggerThan(a[u], pivot) && l != u) { u--; }
+        }
+
+        //swap to new pivot;
+        if (IsBiggerThan(a[l], pivot))
+        {
+            temp = a[l];
+            a[l] = a[pIndex];
+            a[pIndex] = temp;
+            pivot = a[l];
+        }
+        QuickSortS(a, 0, l - 1);
+        QuickSortS(a, l + 1, pIndex);
+
+    }
     private T[] SubArray(T[] a, int si, int ei)
     {
         T[] res = new T[ei - si + 1];
