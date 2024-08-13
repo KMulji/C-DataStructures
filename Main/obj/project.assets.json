@@ -11,6 +11,29 @@
         "runtime": {
           "bin/placeholder/ListADT.dll": {}
         }
+      },
+      "Node/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Node.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Node.dll": {}
+        }
+      },
+      "SinglyList/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Node": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SinglyList.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SinglyList.dll": {}
+        }
       }
     }
   },
@@ -19,11 +42,22 @@
       "type": "project",
       "path": "../ListADT/ListADT.csproj",
       "msbuildProject": "../ListADT/ListADT.csproj"
+    },
+    "Node/1.0.0": {
+      "type": "project",
+      "path": "../Node/Node.csproj",
+      "msbuildProject": "../Node/Node.csproj"
+    },
+    "SinglyList/1.0.0": {
+      "type": "project",
+      "path": "../SinglyList/SinglyList.csproj",
+      "msbuildProject": "../SinglyList/SinglyList.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "ListADT >= 1.0.0"
+      "ListADT >= 1.0.0",
+      "SinglyList >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -53,6 +87,9 @@
           "projectReferences": {
             "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj": {
               "projectPath": "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj"
+            },
+            "/home/lab/Documents/C#DataStructures/SinglyList/SinglyList.csproj": {
+              "projectPath": "/home/lab/Documents/C#DataStructures/SinglyList/SinglyList.csproj"
             }
           }
         }

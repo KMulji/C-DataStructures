@@ -17,3 +17,7 @@
 /home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/Main.genruntimeconfig.cache
 /home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/ref/Main.dll
 /home/lab/Documents/C#DataStructures/Main/obj/Debug/net8.0/Main.sourcelink.json
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Node.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/SinglyList.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/SinglyList.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Node.pdb

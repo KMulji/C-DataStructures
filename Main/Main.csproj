@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ListADT\ListADT.csproj" />
+    <ProjectReference Include="..\SinglyList\SinglyList.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
