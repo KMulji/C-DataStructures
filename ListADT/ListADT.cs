@@ -176,7 +176,7 @@ public class ListADT<T>
     }
     public void InsertionSort()
     {
-        int j = 0;
+        int j = 1;
         for (int i = 0; i < _length; i++)
         {
             j = i;
@@ -214,12 +214,12 @@ public class ListADT<T>
     }
     private void MergeSortS(T[] a)
     {
-        // split step
+        // base case
         if (a.Length <= 1)
         {
             return;
         }
-
+        //split step
         int m = a.Length / 2;
         T[] left = SubArray(a, 0, m - 1);
         T[] right = SubArray(a, m, a.Length - 1);
@@ -262,6 +262,7 @@ public class ListADT<T>
     }
     private void QuickSortS(T[] a, int l, int u)
     {
+        
         if (l >= u) { return; }
         T pivot = a[u];
         int pIndex = u;

@@ -189,104 +189,103 @@ public class Singly<T>
     }
     public void MergeSort()
     {
-        Singly<T> s2 = new();
-        s2._head = _head;
-        s2._tail = _tail;
-        MergeSortS(s2);
+        Node<T> currHead = _head;
+        _head = MergeSortS(currHead);
+        Node<T> curr = _head;
+
+        while (curr.Next != null)
+        {
+            curr = curr.Next;
+        }
+        _tail = curr;
     }
-    private Singly<T> MergeSortS(Singly<T> sl)
+
+    private Node<T> MergeSortS(Node<T>? head)
     {
-        if (sl._head == null || sl._head.Next == null)
+        // base case
+        if (head == null || head.Next == null)
         {
-            Singly<T> test = new();
-            test._head = sl._head;
-            test._tail = sl._tail;
-            return test;
+            return head;
         }
-        Node<T>? fast = sl._head;
-        Node<T>? mid = sl._head;
 
-        while (fast != null && fast.Next != null)
+        //find mid
+        Node<T>? mid = head;
+        Node<T>? fast = head;
+
+        while (fast.Next != null && fast.Next.Next != null)
         {
-            fast = fast.Next.Next;
             mid = mid.Next;
+            fast = fast.Next.Next;
         }
 
-        Singly<T> left = new();
+        //split list and call
+        Node<T>? left = head;
+        Node<T>? right = mid.Next;
 
-        left._head = sl._head;
-        left._tail = mid;
-
-        Singly<T> right = new();
-        right._head = mid.Next;
-        Node<T>? tails = right._head;
         mid.Next = null;
 
-        while (tails != null && tails.Next != null)
-        {
-            tails = tails.Next;
-        }
-
-        right._tail = tails;
-
-        left= MergeSortS(left);
+        left = MergeSortS(left);
         right = MergeSortS(right);
-        Singly<T> List = Merge(left, right);
-        return List;
 
+        //merge new list
+        return Merge(left, right);
     }
-    private static Singly<T> Merge(Singly<T> left, Singly<T> right)
+    private Node<T> Merge(Node<T> left, Node<T> right)
     {
-        Singly<T> newList = new();
-        Node<T> curr = left._head;
-        Node<T> curr2 = right._head;
-
+        Node<T>? newHead = null;
+        Node<T>? newTail = null;
+        Node<T> curr = left;
+        Node<T> curr2 = right;
         while (curr != null && curr2 != null)
         {
             if (IsLessThan(curr.Data, curr2.Data) || IsEqualTo(curr.Data, curr2.Data))
             {
-                if (newList._head == null)
+                Node<T> temp = new Node<T>(curr.Data);
+                if (newHead == null)
                 {
-                    Node<T> temp = new(curr.Data);
-                    newList._head = temp;
-                    newList._tail = temp;
+                    newHead = temp;
+                    newTail = temp;
+
                 }
                 else
                 {
-                    Node<T> temp = new(curr.Data);
-                    newList._tail.Next = temp;
-                    newList._tail = temp;
+                    newTail.Next = temp;
+                    newTail = temp;
                 }
+                curr = curr.Next;
             }
             else
             {
-                if (newList._head == null)
+                Node<T> temp = new Node<T>(curr2.Data);
+                if (newHead == null)
                 {
-                    Node<T> temp = new(curr2.Data);
-                    newList._head = temp;
-                    newList._tail = temp;
+                    newHead = temp;
+                    newTail = temp;
                 }
                 else
                 {
-                    Node<T> temp = new(curr2.Data);
-                    newList._tail.Next = temp;
-                    newList._tail = temp;
+                    newTail.Next = temp;
+                    newTail = temp;
                 }
+                curr2 = curr2.Next;
             }
+
         }
         while (curr != null)
         {
             Node<T> temp = new(curr.Data);
-            newList._tail.Next = temp;
-            newList._tail = temp;
+            newTail.Next = temp;
+            newTail = temp;
+            curr = curr.Next;
         }
         while (curr2 != null)
         {
             Node<T> temp = new(curr2.Data);
-            newList._tail.Next = temp;
-            newList._tail = temp;
+            newTail.Next = temp;
+            newTail = temp;
+            curr2 = curr2.Next;
         }
-        return newList;
+        return newHead;
     }
     private static bool Compare(T a, T b, int res)
     {
