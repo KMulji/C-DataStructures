@@ -1,18 +1,18 @@
-﻿using SinglyList;
-Singly<int> sl = new Singly<int>();
+﻿using Queue;
 
-sl.Append(30);
-sl.Append(10);
-sl.Append(40);
-sl.Append(70);
-sl.Append(50);
-sl.MergeSort();
+QueueADT<int> qt = new();
+for (int i = 0; i < 10; i++)
+{
+    qt.Enqueue(i);
+}
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(qt.Dequeue());
+}
 
-sl.Print();
-Console.WriteLine("................................................");
-// Console.WriteLine(sl.PopBack());
-// Console.WriteLine(sl.PopBack());
-// Console.WriteLine(sl.PopBack());
-//sl.Print();
+Console.WriteLine(qt.Contains(11));
+
+
+
 
 

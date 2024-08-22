@@ -21,3 +21,7 @@
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/SinglyList.dll
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/SinglyList.pdb
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Node.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Stack.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Stack.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Queue.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Queue.pdb

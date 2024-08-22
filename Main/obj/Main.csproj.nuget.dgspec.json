@@ -87,8 +87,14 @@
               "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj": {
                 "projectPath": "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj"
               },
+              "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj"
+              },
               "/home/lab/Documents/C#DataStructures/SinglyList/SinglyList.csproj": {
                 "projectPath": "/home/lab/Documents/C#DataStructures/SinglyList/SinglyList.csproj"
+              },
+              "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj"
               }
             }
           }
@@ -185,6 +191,68 @@
         }
       }
     },
+    "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj",
+        "projectName": "Queue",
+        "projectPath": "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj",
+        "packagesPath": "/home/lab/.nuget/packages/",
+        "outputPath": "/home/lab/Documents/C#DataStructures/Queue/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lab/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/lab/Documents/C#DataStructures/Node/Node.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/Node/Node.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/lab/.dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/lab/Documents/C#DataStructures/SinglyList/SinglyList.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -193,6 +261,68 @@
         "projectPath": "/home/lab/Documents/C#DataStructures/SinglyList/SinglyList.csproj",
         "packagesPath": "/home/lab/.nuget/packages/",
         "outputPath": "/home/lab/Documents/C#DataStructures/SinglyList/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lab/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/lab/Documents/C#DataStructures/Node/Node.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/Node/Node.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/lab/.dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj",
+        "projectName": "Stack",
+        "projectPath": "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj",
+        "packagesPath": "/home/lab/.nuget/packages/",
+        "outputPath": "/home/lab/Documents/C#DataStructures/Stack/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/lab/.nuget/NuGet/NuGet.Config"

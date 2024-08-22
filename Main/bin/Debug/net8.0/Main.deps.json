@@ -9,7 +9,9 @@
       "Main/1.0.0": {
         "dependencies": {
           "ListADT": "1.0.0",
-          "SinglyList": "1.0.0"
+          "Queue": "1.0.0",
+          "SinglyList": "1.0.0",
+          "Stack": "1.0.0"
         },
         "runtime": {
           "Main.dll": {}
@@ -25,12 +27,28 @@
           "Node.dll": {}
         }
       },
+      "Queue/1.0.0": {
+        "dependencies": {
+          "Node": "1.0.0"
+        },
+        "runtime": {
+          "Queue.dll": {}
+        }
+      },
       "SinglyList/1.0.0": {
         "dependencies": {
           "Node": "1.0.0"
         },
         "runtime": {
           "SinglyList.dll": {}
+        }
+      },
+      "Stack/1.0.0": {
+        "dependencies": {
+          "Node": "1.0.0"
+        },
+        "runtime": {
+          "Stack.dll": {}
         }
       }
     }
@@ -51,7 +69,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Queue/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SinglyList/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Stack/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
