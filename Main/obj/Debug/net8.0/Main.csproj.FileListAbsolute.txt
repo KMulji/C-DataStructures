@@ -25,3 +25,7 @@
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Stack.pdb
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Queue.dll
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Queue.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/NodePQ.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/PriorityQueueADT.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/PriorityQueueADT.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/NodePQ.pdb

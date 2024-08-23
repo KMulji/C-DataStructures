@@ -9,6 +9,7 @@
       "Main/1.0.0": {
         "dependencies": {
           "ListADT": "1.0.0",
+          "PriorityQueueADT": "1.0.0",
           "Queue": "1.0.0",
           "SinglyList": "1.0.0",
           "Stack": "1.0.0"
@@ -25,6 +26,22 @@
       "Node/1.0.0": {
         "runtime": {
           "Node.dll": {}
+        }
+      },
+      "NodePQ/1.0.0": {
+        "dependencies": {
+          "Node": "1.0.0"
+        },
+        "runtime": {
+          "NodePQ.dll": {}
+        }
+      },
+      "PriorityQueueADT/1.0.0": {
+        "dependencies": {
+          "NodePQ": "1.0.0"
+        },
+        "runtime": {
+          "PriorityQueueADT.dll": {}
         }
       },
       "Queue/1.0.0": {
@@ -65,6 +82,16 @@
       "sha512": ""
     },
     "Node/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NodePQ/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PriorityQueueADT/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

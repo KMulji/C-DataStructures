@@ -2,8 +2,8 @@
 
 public class Node<T>
 {
-    private T _data;
-    private Node<T>? _next;
+    protected T _data;
+    protected Node<T>? _next;
 
     public Node(T data)
     {

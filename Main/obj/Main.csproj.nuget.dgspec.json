@@ -87,6 +87,9 @@
               "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj": {
                 "projectPath": "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj"
               },
+              "/home/lab/Documents/C#DataStructures/PriorityQueueADT/PriorityQueueADT.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/PriorityQueueADT/PriorityQueueADT.csproj"
+              },
               "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj": {
                 "projectPath": "/home/lab/Documents/C#DataStructures/Queue/Queue.csproj"
               },
@@ -155,6 +158,130 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/lab/.dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lab/Documents/C#DataStructures/NodePQ/NodePQ.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lab/Documents/C#DataStructures/NodePQ/NodePQ.csproj",
+        "projectName": "NodePQ",
+        "projectPath": "/home/lab/Documents/C#DataStructures/NodePQ/NodePQ.csproj",
+        "packagesPath": "/home/lab/.nuget/packages/",
+        "outputPath": "/home/lab/Documents/C#DataStructures/NodePQ/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lab/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/lab/Documents/C#DataStructures/Node/Node.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/Node/Node.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/lab/.dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/lab/Documents/C#DataStructures/PriorityQueueADT/PriorityQueueADT.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/lab/Documents/C#DataStructures/PriorityQueueADT/PriorityQueueADT.csproj",
+        "projectName": "PriorityQueueADT",
+        "projectPath": "/home/lab/Documents/C#DataStructures/PriorityQueueADT/PriorityQueueADT.csproj",
+        "packagesPath": "/home/lab/.nuget/packages/",
+        "outputPath": "/home/lab/Documents/C#DataStructures/PriorityQueueADT/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/lab/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/lab/Documents/C#DataStructures/NodePQ/NodePQ.csproj": {
+                "projectPath": "/home/lab/Documents/C#DataStructures/NodePQ/NodePQ.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -1,18 +1,13 @@
-﻿using Queue;
+﻿using PriorityQueueADT;
 
-QueueADT<int> qt = new();
-for (int i = 0; i < 10; i++)
-{
-    qt.Enqueue(i);
-}
-for (int i = 0; i < 10; i++)
-{
-    Console.WriteLine(qt.Dequeue());
-}
-
-Console.WriteLine(qt.Contains(11));
+PriorityQueueADT<int> pq = new();
 
 
 
-
-
+pq.Push(1, 10);
+pq.Push(2, 12);
+pq.Push(3, 9);
+pq.Push(4, 11);
+pq.Push(5, 14);
+pq.Push(6, 13);
+pq.Print();
