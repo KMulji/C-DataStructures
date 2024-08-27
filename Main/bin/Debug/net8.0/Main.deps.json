@@ -8,14 +8,31 @@
     ".NETCoreApp,Version=v8.0": {
       "Main/1.0.0": {
         "dependencies": {
+          "BNode": "1.0.0",
+          "BinTree": "1.0.0",
           "ListADT": "1.0.0",
           "PriorityQueueADT": "1.0.0",
           "Queue": "1.0.0",
           "SinglyList": "1.0.0",
-          "Stack": "1.0.0"
+          "Stack": "1.0.0",
+          "Tree": "1.0.0",
+          "TreeNode": "1.0.0"
         },
         "runtime": {
           "Main.dll": {}
+        }
+      },
+      "BinTree/1.0.0": {
+        "dependencies": {
+          "BNode": "1.0.0"
+        },
+        "runtime": {
+          "BinTree.dll": {}
+        }
+      },
+      "BNode/1.0.0": {
+        "runtime": {
+          "BNode.dll": {}
         }
       },
       "ListADT/1.0.0": {
@@ -67,11 +84,34 @@
         "runtime": {
           "Stack.dll": {}
         }
+      },
+      "Tree/1.0.0": {
+        "dependencies": {
+          "TreeNode": "1.0.0"
+        },
+        "runtime": {
+          "Tree.dll": {}
+        }
+      },
+      "TreeNode/1.0.0": {
+        "runtime": {
+          "TreeNode.dll": {}
+        }
       }
     }
   },
   "libraries": {
     "Main/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BinTree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BNode/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -107,6 +147,16 @@
       "sha512": ""
     },
     "Stack/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TreeNode/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

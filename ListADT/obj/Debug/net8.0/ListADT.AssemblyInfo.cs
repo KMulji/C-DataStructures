@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ListADT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44ed1c7335ebbd78d13149b7b9b207ccd622c020")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da52637da6801cbb313a760d1950ee1b3fcbd03c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ListADT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ListADT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,6 +6,10 @@
     <ProjectReference Include="..\Stack\Stack.csproj" />
     <ProjectReference Include="..\Queue\Queue.csproj" />
     <ProjectReference Include="..\PriorityQueueADT\PriorityQueueADT.csproj" />
+    <ProjectReference Include="..\Tree\Tree.csproj" />
+    <ProjectReference Include="..\TreeNode\TreeNode.csproj" />
+    <ProjectReference Include="..\BinTree\BinTree.csproj" />
+    <ProjectReference Include="..\BNode\BNode.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

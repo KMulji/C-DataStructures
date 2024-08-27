@@ -29,3 +29,11 @@
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/PriorityQueueADT.dll
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/PriorityQueueADT.pdb
 /home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/NodePQ.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/BinTree.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/BNode.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Tree.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/TreeNode.dll
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/Tree.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/TreeNode.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/BinTree.pdb
+/home/lab/Documents/C#DataStructures/Main/bin/Debug/net8.0/BNode.pdb

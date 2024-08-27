@@ -2,6 +2,29 @@
   "version": 3,
   "targets": {
     "net8.0": {
+      "BinTree/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "BNode": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BinTree.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BinTree.dll": {}
+        }
+      },
+      "BNode/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/BNode.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BNode.dll": {}
+        }
+      },
       "ListADT/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -86,10 +109,43 @@
         "runtime": {
           "bin/placeholder/Stack.dll": {}
         }
+      },
+      "Tree/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "TreeNode": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tree.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tree.dll": {}
+        }
+      },
+      "TreeNode/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/TreeNode.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TreeNode.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "BinTree/1.0.0": {
+      "type": "project",
+      "path": "../BinTree/BinTree.csproj",
+      "msbuildProject": "../BinTree/BinTree.csproj"
+    },
+    "BNode/1.0.0": {
+      "type": "project",
+      "path": "../BNode/BNode.csproj",
+      "msbuildProject": "../BNode/BNode.csproj"
+    },
     "ListADT/1.0.0": {
       "type": "project",
       "path": "../ListADT/ListADT.csproj",
@@ -124,15 +180,29 @@
       "type": "project",
       "path": "../Stack/Stack.csproj",
       "msbuildProject": "../Stack/Stack.csproj"
+    },
+    "Tree/1.0.0": {
+      "type": "project",
+      "path": "../Tree/Tree.csproj",
+      "msbuildProject": "../Tree/Tree.csproj"
+    },
+    "TreeNode/1.0.0": {
+      "type": "project",
+      "path": "../TreeNode/TreeNode.csproj",
+      "msbuildProject": "../TreeNode/TreeNode.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BNode >= 1.0.0",
+      "BinTree >= 1.0.0",
       "ListADT >= 1.0.0",
       "PriorityQueueADT >= 1.0.0",
       "Queue >= 1.0.0",
       "SinglyList >= 1.0.0",
-      "Stack >= 1.0.0"
+      "Stack >= 1.0.0",
+      "Tree >= 1.0.0",
+      "TreeNode >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -160,6 +230,12 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "/home/lab/Documents/C#DataStructures/BNode/BNode.csproj": {
+              "projectPath": "/home/lab/Documents/C#DataStructures/BNode/BNode.csproj"
+            },
+            "/home/lab/Documents/C#DataStructures/BinTree/BinTree.csproj": {
+              "projectPath": "/home/lab/Documents/C#DataStructures/BinTree/BinTree.csproj"
+            },
             "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj": {
               "projectPath": "/home/lab/Documents/C#DataStructures/ListADT/ListADT.csproj"
             },
@@ -174,6 +250,12 @@
             },
             "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj": {
               "projectPath": "/home/lab/Documents/C#DataStructures/Stack/Stack.csproj"
+            },
+            "/home/lab/Documents/C#DataStructures/Tree/Tree.csproj": {
+              "projectPath": "/home/lab/Documents/C#DataStructures/Tree/Tree.csproj"
+            },
+            "/home/lab/Documents/C#DataStructures/TreeNode/TreeNode.csproj": {
+              "projectPath": "/home/lab/Documents/C#DataStructures/TreeNode/TreeNode.csproj"
             }
           }
         }
