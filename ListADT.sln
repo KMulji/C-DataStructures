@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BNode", "BNode\BNode.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinTree", "BinTree\BinTree.csproj", "{A3AF2F70-86E8-43AE-BF3D-713D6CC8A896}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BST", "BST\BST.csproj", "{FD55EDEE-3EE2-4511-AE5D-40272E3B2405}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSTDriver", "BSTDriver\BSTDriver.csproj", "{D3638762-4FAC-4FF2-829C-7C2F34C243E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -84,5 +88,13 @@ Global
 		{A3AF2F70-86E8-43AE-BF3D-713D6CC8A896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3AF2F70-86E8-43AE-BF3D-713D6CC8A896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3AF2F70-86E8-43AE-BF3D-713D6CC8A896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD55EDEE-3EE2-4511-AE5D-40272E3B2405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD55EDEE-3EE2-4511-AE5D-40272E3B2405}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD55EDEE-3EE2-4511-AE5D-40272E3B2405}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD55EDEE-3EE2-4511-AE5D-40272E3B2405}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3638762-4FAC-4FF2-829C-7C2F34C243E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3638762-4FAC-4FF2-829C-7C2F34C243E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3638762-4FAC-4FF2-829C-7C2F34C243E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3638762-4FAC-4FF2-829C-7C2F34C243E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

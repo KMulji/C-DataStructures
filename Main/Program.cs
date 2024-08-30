@@ -25,11 +25,13 @@ while (qt.Count != 0)
     right = Convert.ToBoolean(Console.ReadLine());
     if (left == true)
     {
+
         BNode<int> l = new();
         Console.WriteLine("Enter a left value");
         val = Convert.ToInt32(Console.ReadLine());
         l._data = val;
         top._left = l;
+        l._parent = top;
         qt.Enqueue(l);
     }
     if (right == true)
@@ -39,6 +41,7 @@ while (qt.Count != 0)
         val = Convert.ToInt32(Console.ReadLine());
         r._data = val;
         top._right = r;
+        r._parent = top;
         qt.Enqueue(r);
     }
 }
@@ -50,8 +53,3 @@ Console.WriteLine("-----------------------");
 bt.PostOrder();
 Console.WriteLine("-----------------------");
 bt.LevelOrder();
-
-
-
-
-
