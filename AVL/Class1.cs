@@ -126,6 +126,66 @@ public class AVL<T>
         }
         return root;
     }
+    public void Delete(T val)
+    {
+        DeleteS(Root, val);
+    }
+    private ANode<T> DeleteS(ANode<T> root, T val)
+    {
+        if (root == null)
+        {
+            return null;
+        }
+        if (IsLessThan(val, root.Data))
+        {
+            root.Left = DeleteS(root.Left, val);
+        }
+        else if (IsBiggerThan(val, root.Data))
+        {
+            root.Right = DeleteS(root.Right, val);
+        }
+        else
+        {
+            //leaf
+            if (root.Left == null && root.Right == null)
+            {
+                return null;
+            }
+
+            if (root.Left.Height > root.Right.Height)
+            {
+                ANode<T> q = Pred(root.Left);
+                root.Data = q.Data;
+                root.Left = DeleteS(root.Left, q.Data);
+            }
+            else
+            {
+                ANode<T> q = Succ(root.Right);
+                root.Data = q.Data;
+                root.Right = DeleteS(root.Right, q.Data);
+            }
+        }
+        return root;
+    }
+    private ANode<T> Succ(ANode<T> root)
+    {
+        while (root != null && root.Left != null)
+        {
+            root = root.Left;
+        }
+        return root;
+    }
+    private ANode<T> Pred(ANode<T> root)
+    {
+
+
+        while (root != null && root.Right != null)
+        {
+            root = root.Right;
+        }
+        return root;
+
+    }
     private int HeightCal(ANode<T> root)
     {
         int lHeight = root != null && root.Left != null ? root.Left.Height : 0;

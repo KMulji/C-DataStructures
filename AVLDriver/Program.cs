@@ -3,11 +3,15 @@ using AVL;
 
 AVL<int> al = new();
 
-al.Insert(6);
-al.Insert(10);
-al.Insert(8);
-al.Insert(7);
-al.Insert(9);
+
+for (int i = 1; i <= 9; i++)
+{
+    al.Insert(i);
+}
 al.Display();
+al.Delete(4);
+Console.WriteLine("----------------");
+al.Display();
+Console.WriteLine("eof");
 
 
