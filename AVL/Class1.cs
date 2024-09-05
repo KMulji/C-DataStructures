@@ -152,18 +152,103 @@ public class AVL<T>
                 return null;
             }
 
-            if (root.Left.Height > root.Right.Height)
+            if (root != null && root.Left != null && root.Right != null && root.Left.Height > root.Right.Height)
             {
                 ANode<T> q = Pred(root.Left);
                 root.Data = q.Data;
                 root.Left = DeleteS(root.Left, q.Data);
             }
-            else
+            else if (root != null && root.Right != null)
             {
                 ANode<T> q = Succ(root.Right);
                 root.Data = q.Data;
                 root.Right = DeleteS(root.Right, q.Data);
             }
+        }
+        root.Height = HeightCal(root);
+        // LL Rotation 
+        if (BalanceFactor(root) == 2 && BalanceFactor(root.Left) == 1)
+        {
+
+            ANode<T> pl = root.Left;
+            ANode<T> plr = pl.Right;
+
+            pl.Right = root;
+            root.Left = plr;
+
+            root.Height = HeightCal(root);
+            pl.Height = HeightCal(root);
+
+            if (root == Root)
+            {
+                Root = pl;
+            }
+
+            return pl;
+        }
+        //LR Rotation
+        else if (BalanceFactor(root) == 2 && BalanceFactor(root.Left) == -1)
+        {
+            ANode<T> pl = root.Left;
+            ANode<T> plr = pl.Right;
+            ANode<T> plrl = plr.Left;
+            ANode<T> plrr = plr.Right;
+
+            plr.Left = pl;
+            plr.Right = root;
+            pl.Right = plrl;
+            root.Left = plrr;
+
+            root.Height = HeightCal(root);
+            plr.Height = HeightCal(plr);
+            pl.Height = HeightCal(pl);
+            if (Root == root)
+            {
+                Root = plr;
+            }
+        }
+        //RR Rotation
+        else if (BalanceFactor(root) == -2 && BalanceFactor(root.Right) == -1)
+        {
+            ANode<T> pr = root.Right;
+            ANode<T> prl = pr.Left;
+
+            pr.Left = root;
+            root.Right = prl;
+
+            root.Height = HeightCal(root);
+            pr.Height = HeightCal(pr);
+
+            if (root == Root)
+            {
+                Root = pr;
+            }
+
+            return pr;
+
+        }
+        //RL rotation
+        else if (BalanceFactor(root) == -2 && BalanceFactor(root.Right) == 1)
+        {
+            ANode<T> pr = root.Right;
+            ANode<T> prl = pr.Left;
+            ANode<T> prll = prl.Left;
+            ANode<T> prlr = prl.Right;
+
+            prl.Left = root;
+            prl.Right = pr;
+            root.Right = prll;
+            pr.Left = prlr;
+
+            root.Height = HeightCal(root);
+            pr.Height = HeightCal(pr);
+            prl.Height = HeightCal(prl);
+
+            if (Root == root)
+            {
+                Root = prl;
+            }
+            return prl;
         }
         return root;
     }
@@ -177,8 +262,6 @@ public class AVL<T>
     }
     private ANode<T> Pred(ANode<T> root)
     {
-
-
         while (root != null && root.Right != null)
         {
             root = root.Right;
